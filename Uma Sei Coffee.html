@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Uma Sei Coffee – Kafe rumah Jawa di Ciater, Tangerang Selatan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--brand:#2d6a3a;--cream:#efe9dd;--bg:#f2eee3;--ink:#1c2a1d;--mute:#5f6a5a;--green:#2d6a3a;--green-ink:#fff;--tile:#4f6f86;--wood:#6b4528;--card:#fbf8f0;--line:#dcd5c3;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141a12;--ink:#eef0e6;--mute:#a4ad9c;--green:#7fb878;--green-ink:#10200d;--tile:#7fa0b8;--wood:#c79a6d;--card:#1d241a;--line:#2f382b}}
+:root[data-theme="dark"]{--bg:#141a12;--ink:#eef0e6;--mute:#a4ad9c;--green:#7fb878;--green-ink:#10200d;--tile:#7fa0b8;--wood:#c79a6d;--card:#1d241a;--line:#2f382b}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "DM Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Young Serif",Georgia,serif;font-weight:400;line-height:1.15;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--tile);outline-offset:3px}
+.wrap{max-width:920px;margin:0 auto;padding:0 20px}
+.tiles{height:34px;background:
+ radial-gradient(circle at 50% 50%,transparent 0 5px,var(--tile) 5.5px 8px,transparent 8.5px) 0 0/34px 34px,
+ conic-gradient(from 45deg,var(--bg) 0 25%,color-mix(in srgb,var(--tile) 18%,var(--bg)) 0 50%,var(--bg) 0 75%,color-mix(in srgb,var(--tile) 18%,var(--bg)) 0) 0 0/34px 34px}
+header.hero{padding:40px 0 48px;background:var(--brand);color:var(--cream)}
+.logo{display:block;width:clamp(150px,38vw,210px);height:auto}
+.hero h1{font-size:clamp(40px,10vw,76px);margin:26px 0 14px}
+.hero p.lead{font-size:clamp(18px,3.4vw,22px);max-width:34ch;color:var(--cream);opacity:.9;margin:0 0 26px}
+.hero .btn{border-color:var(--cream);color:var(--cream)}.hero .btn.main{background:var(--cream);color:var(--brand)}.hero .facts,.hero .facts b,.hero .rate{color:var(--cream)}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--green);color:var(--green)}
+.btn.main{background:var(--green);color:var(--green-ink)}
+.facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:26px;color:var(--mute);font-size:15px}
+.facts b{color:var(--ink)}
+section{padding:48px 0}
+h2{font-size:clamp(28px,6vw,40px);margin-bottom:12px}
+.sub{color:var(--mute);margin:0 0 24px;max-width:56ch}
+.about{background:color-mix(in srgb,var(--brand) 10%,var(--bg))}
+.hl{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:22px}
+.hl div{border:1.5px solid color-mix(in srgb,var(--brand) 35%,transparent);border-radius:14px;padding:16px 18px}
+.hl strong{display:block;font-family:"Young Serif",serif;font-weight:400;font-size:20px;margin-bottom:4px}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:2px 0 14px;margin:0 -20px;padding-left:20px;padding-right:20px}
+.tab{flex:none;min-height:44px;padding:0 20px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font:500 16px "DM Sans";cursor:pointer}
+.tab[aria-selected="true"]{background:var(--green);border-color:var(--green);color:var(--green-ink);font-weight:700}
+.menu{list-style:none;margin:0;padding:0;background:var(--card);border:1.5px solid var(--line);border-radius:16px}
+.menu li{display:flex;gap:14px;align-items:baseline;padding:14px 18px;border-bottom:1px dashed var(--line)}
+.menu li:last-child{border-bottom:0}
+.menu .n{flex:1}
+.menu .n small{display:block;color:var(--mute);font-size:14px;line-height:1.4}
+.menu .p{font-weight:700;white-space:nowrap}
+.fav{display:inline-block;margin-left:6px;padding:1px 9px;border-radius:99px;background:color-mix(in srgb,var(--wood) 18%,transparent);color:var(--wood);font-size:12px;font-weight:700;vertical-align:2px}
+.note{font-size:14px;color:var(--mute);margin-top:14px}
+.visit{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.box{background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:20px}
+.box h3{font-size:21px;margin-bottom:8px}
+.box p{margin:0 0 10px}
+.tip{border-left:4px solid var(--wood);padding:4px 0 4px 14px;margin-top:6px;color:var(--mute);font-size:15px}
+.busy{display:flex;align-items:flex-end;gap:3px;height:56px;margin:10px 0 6px}
+.busy i{flex:1;background:var(--tile);opacity:.55;border-radius:3px 3px 0 0}
+.busy i.hi{opacity:1}
+footer{background:var(--brand);color:var(--cream);padding:34px 0 40px}
+footer a{font-weight:700}
+.rate{color:var(--wood);font-weight:700}
+@media (prefers-reduced-motion:no-preference){.logo{animation:pop .7s ease-out both}@keyframes pop{from{transform:scale(.8) rotate(-12deg);opacity:0}}}
+</style>
+</head>
+<body>
+<div class="tiles" aria-hidden="true"></div>
+<header class="hero"><div class="wrap">
+  <svg class="logo" viewBox="0 0 200 200" role="img" aria-label="Logo Uma Sei">
+    <circle cx="100" cy="100" r="100" fill="#2d6a3a"/>
+    <g fill="none" stroke="#efe9dd" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M54.4 27.1A86 86 0 0 1 172.6 146.1" stroke-width="7"/>
+      <path d="M145.6 172.9A86 86 0 0 1 27.1 54.4" stroke-width="7"/>
+      <path d="M121 122H157M153 122V101L138 84L124 98V122M129 122V108H134V122M138 77Q150 75 160 66" stroke-width="4"/>
+    </g>
+    <g fill="#efe9dd" font-family="'DM Sans',system-ui,sans-serif" font-weight="700" font-size="25">
+      <text x="42" y="98" textLength="62" lengthAdjust="spacing">UMA</text>
+      <text x="42" y="123" textLength="62" lengthAdjust="spacing">SEI</text>
+    </g>
+  </svg>
+  <h1>Uma Sei Coffee</h1>
+  <p class="lead">Ngopi dan ngemil di rumah ala Yogyakarta, di tengah Ciater.</p>
+  <div class="btns">
+    <a class="btn main" href="https://wa.me/6287874945790?text=Halo%20Uma%20Sei%20Coffee%2C%20saya%20mau%20pesan%20/%20tanya%20tempat." target="_blank" rel="noopener">Chat WhatsApp</a>
+    <a class="btn" href="#menu">Lihat menu</a>
+    <a class="btn" href="https://maps.app.goo.gl/Qe1zQ63aiefBYQWj7?g_st=ic" target="_blank" rel="noopener">Petunjuk arah</a>
+  </div>
+  <div class="facts"><span class="rate">4,7 dari 214 ulasan Google</span><span>Kafe</span><span>Rp 25–50 rb per orang</span><span><b>Buka</b> sampai 23.00</span></div>
+</div></header>
+
+<section class="about"><div class="wrap">
+  <h2>Suasana rumah Jawa yang hangat</h2>
+  <p class="sub">Dekorasi vintage, lantai tegel bermotif, bar bata, dan kursi kayu. Tempat yang enak untuk duduk lama: pengunjung rata-rata betah 1,5 sampai 3,5 jam.</p>
+  <div class="hl">
+    <div><strong>Pisang goreng gula jawa</strong>Favorit pengunjung, disajikan manis dengan gula jawa.</div>
+    <div><strong>Camilan lengkap</strong>Dari risol, dimsum, cireng, sampai mix platter untuk ramai-ramai.</div>
+    <div><strong>Nasi dan mi</strong>Katsu, karage sambal matah, beef teriyaki, dan Indomie pakai telur.</div>
+  </div>
+</div></section>
+
+<section id="menu"><div class="wrap">
+  <h2>Menu</h2>
+  <p class="sub">Harga dalam ribu rupiah. Menu bertanda <span class="fav">Favorit</span> paling sering dipesan.</p>
+  <div class="tabs" role="tablist" aria-label="Kategori menu"></div>
+  <ul class="menu" id="list" role="tabpanel"></ul>
+  <p class="note">Menu kopi dan minuman belum tercantum di sini. Tanyakan lewat WhatsApp atau Instagram. Harga bisa berubah sewaktu-waktu.</p>
+</div></section>
+
+<section id="kunjungi"><div class="wrap">
+  <h2>Datang ke Uma Sei</h2>
+  <p class="sub">Dekat simpang tol Ciater, Serpong, Tangerang Selatan.</p>
+  <div class="visit">
+    <div class="box"><h3>Alamat</h3>
+      <p>Jl. Ciater Raya, Jl. Persatuan No. 56, RT.10/RW.08, Ciater, Kec. Serpong, Kota Tangerang Selatan, Banten 15317</p>
+      <a class="btn main" href="https://maps.app.goo.gl/Qe1zQ63aiefBYQWj7?g_st=ic" target="_blank" rel="noopener">Buka di Google Maps</a>
+      <div class="tip">Gang menuju kafe sempit dan parkir mobil terbatas. Motor lebih mudah, atau parkir lebih awal dan jalan sedikit.</div>
+    </div>
+    <div class="box"><h3>Jam ramai</h3>
+      <p>Buka sampai pukul 23.00. Paling ramai di malam hari, sekitar pukul 18.00 sampai 21.00.</p>
+      <div class="busy" aria-hidden="true"><i style="height:12%"></i><i style="height:12%"></i><i style="height:14%"></i><i style="height:16%"></i><i style="height:22%"></i><i style="height:28%"></i><i style="height:40%"></i><i style="height:55%"></i><i style="height:72%"></i><i class="hi" style="height:88%"></i><i class="hi" style="height:92%"></i><i class="hi" style="height:90%"></i><i style="height:62%"></i></div>
+      <p class="note" style="margin:0">Pagi sampai siang cenderung sepi, cocok untuk kerja atau ngobrol santai.</p>
+    </div>
+    <div class="box"><h3>Hubungi kami</h3>
+      <p>Telepon / WhatsApp: <a href="tel:+6287874945790"><b>0878-7494-5790</b></a></p>
+      <p>Instagram: <a href="https://www.instagram.com/umasei_coffee/" target="_blank" rel="noopener"><b>@umasei_coffee</b></a></p>
+      <p>TikTok: <a href="https://www.tiktok.com/@umasei_coffee" target="_blank" rel="noopener"><b>@umasei_coffee</b></a></p>
+      <a class="btn" href="https://wa.me/6287874945790" target="_blank" rel="noopener">Pesan via WhatsApp</a>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <h2 style="color:#fff;font-size:26px;margin-bottom:6px">Uma Sei Coffee</h2>
+  <p style="margin:0 0 6px">Jl. Persatuan No. 56, Ciater, Serpong, Tangerang Selatan.</p>
+  <p style="margin:0">Pesan lewat <a href="https://wa.me/6287874945790" target="_blank" rel="noopener">WhatsApp</a> atau ikuti <a href="https://www.instagram.com/umasei_coffee/" target="_blank" rel="noopener">Instagram</a>.</p>
+</div></footer>
+<div class="tiles" aria-hidden="true"></div>
+
+<script>
+const M={
+"Snack":[["Cookies",15],["Pisang Goreng",18,"fav"],["Kentang Goreng",18],["Kentang Keju",22],["Donat (3 pcs)",18],["Dimsum Original",18],["Singkong Goreng",20],["Risol Mayo",20],["Risol Rogout",20],["Dimsum Mentai",20,"fav"],["Sosis Solo",20],["Pisang Keju",20],["Pisang Coklat",20],["Cireng Rujak",20],["Cireng Isi",20],["Potato Wings",25],["Eggroll & Fries",25],["Mix Platter",30,"fav","Kentang, sosis, chicken popcorn atau nugget"]],
+"Indomie":[["Indomie Goreng",15,"","Sudah termasuk telur"],["Indomie Kuah",15,"","Sudah termasuk telur. Pilih soto atau ayam bawang"]],
+"Rice":[["Eggroll",30],["Katsu",30],["Karage",30,"fav","Sambal matah"],["Beef Teriyaki",35,"","Sambal bawang"]],
+"Add on":[["Sambal Matah",5],["Telur",5],["Sosis",7]]
+};
+const tabs=document.querySelector(".tabs"),list=document.getElementById("list");
+function show(k){
+  [...tabs.children].forEach(b=>b.setAttribute("aria-selected",b.dataset.k===k));
+  list.innerHTML=M[k].map(([n,p,f,d])=>`<li><span class="n">${n}${f?'<span class="fav">Favorit</span>':''}${d?`<small>${d}</small>`:''}</span><span class="p">Rp ${p}rb</span></li>`).join("");
+}
+Object.keys(M).forEach((k,i)=>{
+  const b=document.createElement("button");b.className="tab";b.textContent=k;b.dataset.k=k;b.setAttribute("role","tab");
+  b.onclick=()=>show(k);tabs.appendChild(b);
+});
+show("Snack");
+</script>
+</body>
+</html>
